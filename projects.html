@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ilk sitem</title>
+        <title>My Website</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -14,16 +11,55 @@
 
         <nav class="navbar">
             <ul> 
-                <li><a href="index.html">Ana Menü</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="projects.html" class="active">Projelerim</a></li>
-                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Random</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
         <main>
-            <h3 class="animate">Projelerim</h3>
-            <p class="animate">(yazı)</p>
+            <h3 class="animate">Random Stuff I Made</h3>
+            <p class="animate">Here are some random things i made when i was bored:</p>
+
+            <label>
+                <input type="checkbox" class="option">
+                    Try to
+                </label>
+
+                <label>
+                <input type="checkbox" class="option">
+                    Select
+                </label>
+
+                <label>
+                <input type="checkbox" class="option">
+                    All the boxes
+                </label>
+
+                <script>
+                const options = document.querySelectorAll(".option");
+                const selected = [];
+
+                options.forEach(option => {
+                    option.addEventListener("change", () => {
+                    if (option.checked) {
+                        selected.push(option);
+
+                        if (selected.length > 2) {
+                        const oldest = selected.shift();
+                        oldest.checked = false;
+                        }
+                    } else {
+                        const index = selected.indexOf(option);
+
+                        if (index !== -1) {
+                        selected.splice(index, 1);
+                        }
+                    }
+                    });
+                });
+            </script>
         </main>
     </body>
        
