@@ -8,8 +8,8 @@
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    background-color: #1e1e1e;
-    color: #e4e4e4;
+    background-color: #f9bef3;
+    color: #a34b96;
 }
 
 main {
@@ -24,7 +24,7 @@ h1 {
 /* Navbar */
 .navbar ul {
     list-style-type: none;
-    background-color: #2d2d2d;
+    background-color: #cd81c8;
     padding: 0 12px;
     margin: 0;
     display: flex;
@@ -49,7 +49,7 @@ h1 {
 }
 
 .navbar a:hover {
-    background-color: #404040;
+    background-color: #ab62a6;
     color: #ffffff;
     transform: translateY(-2px);
 }
@@ -74,7 +74,7 @@ h1 {
 }
 
 .navbar a.active {
-    background-color: #555555;
+    background-color: #cf9ccb;
     color: #ffffff;
 }
 .animate {
