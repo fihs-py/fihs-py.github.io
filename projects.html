@@ -22,46 +22,14 @@
         <main>
             <h3 class="animate">Random Stuff I Made</h3>
             <p class="animate">Here are some random things i made when i was bored:</p>
-
-            <label>
-                <input type="checkbox" class="option">
-                    Try to
-                </label>
-
-                <label>
-                <input type="checkbox" class="option">
-                    Select
-                </label>
-
-                <label>
-                <input type="checkbox" class="option">
-                    All the boxes
-                </label>
-
-                <script>
-                const options = document.querySelectorAll(".option");
-                const selected = [];
-
-                options.forEach(option => {
-                    option.addEventListener("change", () => {
-                    if (option.checked) {
-                        selected.push(option);
-
-                        if (selected.length > 2) {
-                        const oldest = selected.shift();
-                        oldest.checked = false;
-                        }
-                    } else {
-                        const index = selected.indexOf(option);
-
-                        if (index !== -1) {
-                        selected.splice(index, 1);
-                        }
-                    }
-                    });
-                });
-            </script>
+            <hr>
+            <h3>Input box:</h3>
+            <input id="input1">
+            <button id="button1" onclick="getInput()">submit</button>
+            <h3 id="wow"><h3> 
+            <hr>
         </main>
+        <script src="projects.js"></script>
     </body>
        
 </html> 
