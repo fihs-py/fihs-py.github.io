@@ -101,3 +101,48 @@ h1 {
         transform: translateY(0);
     }
 }
+@media (max-width: 768px) {
+
+    main {
+        margin: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    
+    .navbar ul {
+        height: auto;
+        min-height: 56px;
+        padding: 6px 8px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        padding: 9px 10px;
+        font-size: 14px;
+    }
+
+   
+    .navbar li.logo {
+        width: 100%;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .nav-logo {
+        max-height: 50px;
+    }
+
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+   
+    body {
+        overflow-x: hidden;
+    }
+}

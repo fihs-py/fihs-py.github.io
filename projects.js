@@ -5,10 +5,10 @@ const randomL = document.getElementById("randomL");
 const minL = document.getElementById("min");
 const maxL = document.getElementById("max");
 
-const uwuL = document.getElementById("uwuify")
-const inputuwu = document.getElementById("uwu")
+const uwuL = document.getElementById("uwuify");
+const inputuwu = document.getElementById("uwu");
 function getInput(){
-    wow.textContent = `You typed "${inputbox.value}" :3`
+    wow.textContent = `You typed "${inputbox.value}" :3`;
 }
 function genRandom(){
     let min = Number(minL.value);
