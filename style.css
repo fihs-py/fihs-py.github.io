@@ -11,11 +11,19 @@ body {
     background-color: #f9bef3;
     color: #a34b96;
 }
-
+hr {
+    border: none;
+    border-top: 2px dashed rgb(216, 130, 219);
+}
 main {
     margin: 20px;
 }
-
+.highlight {
+    background-color: #229229;
+}
+.yellow {
+    background-color: yellow;
+}
 h1 {
     text-align: center;
     color: #f1f1f1;
