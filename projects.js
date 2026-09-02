@@ -1,4 +1,4 @@
-const words = [  //ignore this please
+const words = [  // THIS IS THE REASON WHY %80 OF THIS WEBSITE IS JAVASCRIPT
   "aback",
   "abaft",
   "abase",
@@ -3115,7 +3115,71 @@ const maxL = document.getElementById("max");
 
 const uwuL = document.getElementById("uwuify");
 const inputuwu = document.getElementById("uwu");
+const grid = document.querySelector(".buttongrid");
 
+const numbers = Array.from({ length: 18 }, (_, i) => i + 1);
+const values = [...numbers, ...numbers];
+
+values.sort(() => Math.random() - 0.5);
+
+let firstButton = null;
+let firstValue = null;
+
+for (let i = 0; i < 36; i++) {
+  const button = document.createElement("button");
+
+  button.textContent = "!";
+
+  button.addEventListener("click", () => {
+    const value = values[i];
+
+    if (firstButton === null) {
+      firstButton = button;
+      firstValue = value;
+
+      button.textContent = value;
+
+      return;
+    }
+
+    if (button === firstButton) {
+      return;
+    }
+
+    button.textContent = value;
+
+    if (value === firstValue) {
+      // MATCH!
+      firstButton.disabled = true;
+      button.disabled = true;
+
+      firstButton = null;
+      firstValue = null;
+
+    } else {
+      // NOT A MATCH
+      grid.querySelectorAll("button").forEach(btn => {
+        btn.disabled = true;
+      });
+
+      setTimeout(() => {
+        firstButton.textContent = "!";
+        button.textContent = "!";
+
+        grid.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent === "!") {
+            btn.disabled = false;
+          }
+        });
+
+        firstButton = null;
+        firstValue = null;
+      }, 1000);
+    }
+  });
+
+  grid.appendChild(button);
+}
 function getInput(){
     wow.textContent = `You typed "${inputbox.value}" :3`;
 }
